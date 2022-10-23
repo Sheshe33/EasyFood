@@ -15,7 +15,8 @@
     <%= f.input :password_confirmation,
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
-                <%= f.association :role, as: :radio_buttons %>
+     <%= f.label :role %>
+                <%= f.select :role, User.roles.keys %>
   </div>
 
   <div class="form-actions">
