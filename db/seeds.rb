@@ -13,6 +13,7 @@ Menu.destroy_all
 Category.destroy_all
 User.destroy_all
 
+
 #for User
 
 puts "Destroying Users"
@@ -73,7 +74,7 @@ puts "Creating Menus"
 Menu.create!(name: "lunch menu", description: "main course + entree or dessert", price: 20)
 Menu.create!(name: "dinner menu", description: "entree + main course + drink + dessert", price: 35)
 
- puts "#{Menu.count} menus created!"
+puts "#{Menu.count} menus created!"
 
 # for orders
 
@@ -82,14 +83,9 @@ puts "Creating Orders"
 
 
 Order.create!(user: tom, status: "served", payment_status: "paid", total_price: 75, hour: Time.new(2022, 10, 28, 12, 30))
-Order.create!(user: sophie, status: "served", payment_status: "unpaid", total_price: 75, hour: Time.new(2022, 10, 28, 13, 30) )
+Order.create!(user: sophie, status: "served", payment_status: "unpaid", total_price: 75, hour: Time.new(2022, 10, 28, 13, 30))
 Order.create!(user: peter, status: "served", payment_status: "paid", total_price: 75, hour: Time.new(2022, 10, 28, 14, 00))
 
 puts "#{Order.count} orders created!"
-
-
-
-
-
 
 
