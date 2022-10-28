@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   # root "articles#index"
 
 
-  resources :orders, only: [:edit, :update, :index] do
+  resources :orders, only: [:update, :index] do
     resources :orders_items, only: [:index, :create, :destroy] do
       resources :menus
       resources :meals

@@ -1,0 +1,16 @@
+.navbar-admin {
+  justify-content: space-between;
+  -webkit-backdrop-filter: blur(30px);
+  backdrop-filter: blur(30px);
+  top: 0;
+  position: fixed;
+  width: 100%;
+}
+
+.navbar-admin .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-admin .navbar-brand img {
+  width: 40px;
+}

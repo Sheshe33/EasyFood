@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+
 Order.destroy_all
 Meal.destroy_all
 Menu.destroy_all
@@ -85,3 +86,10 @@ Order.create!(user: sophie, status: "served", payment_status: "unpaid", total_pr
 Order.create!(user: peter, status: "served", payment_status: "paid", total_price: 75, hour: Time.new(2022, 10, 28, 14, 00))
 
 puts "#{Order.count} orders created!"
+
+
+
+
+
+
+
