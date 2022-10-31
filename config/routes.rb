@@ -8,10 +8,10 @@ Rails.application.routes.draw do
 
 
   resources :orders, only: [:update, :index] do
-    resources :orders_items, only: [:index, :create, :destroy] do
-      resources :menus
-      resources :meals
-    end
+    resources :orders_items, only: [:index, :create, :destroy]
   end
-  resources :categories
+  resources :menus
+  resources :meals do
+    resources :categories
+  end
 end
