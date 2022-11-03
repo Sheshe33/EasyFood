@@ -87,5 +87,3 @@ Order.create!(user: sophie, status: "served", payment_status: "unpaid", total_pr
 Order.create!(user: peter, status: "served", payment_status: "paid", total_price: 75, hour: Time.new(2022, 10, 28, 14, 00))
 
 puts "#{Order.count} orders created!"
-
-
