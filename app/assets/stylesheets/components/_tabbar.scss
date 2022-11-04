@@ -5,8 +5,9 @@
 }
 
 .menu {
-	position: absolute;
+	position: fixed;
 	bottom: 0px;
+  padding-top: 10px;
   left: 0px;
   z-index: 100;
 	width: 100%;

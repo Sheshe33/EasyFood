@@ -1,12 +1,14 @@
 class MealsController < ApplicationController
-  before_action :authenticate_admin!, except: [:index, :show]
+  before_action :authenticate_user!, except: [:index, :show]
 
   def index
     @meals = Meal.all
+    @categories = Category.all
   end
 
   def show
     @meal = Meal.find(params[:id])
+    @category= Category.find(params[:id])
   end
 
   def new
@@ -14,7 +16,7 @@ class MealsController < ApplicationController
   end
 
   def create
-    @meal = Meal.new(organ_params)
+    @meal = Meal.new(meal_params)
     @meal.user = current_user
     @meal.save
     redirect_to meals_path(@meal)
@@ -39,6 +41,6 @@ class MealsController < ApplicationController
   private
 
   def meal_params
-    params.require(:mood).permit(:name, :description, :price, :stock, :image_url)
+    params.require(:meal).permit(:name, :description, :price, :stock, :image_url)
   end
 end
