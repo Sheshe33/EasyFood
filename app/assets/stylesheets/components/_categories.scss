@@ -1,0 +1,25 @@
+.categories-items p {
+  display: flex;
+  justify-content: center;
+  margin-right: 5px;
+  padding: 3px;
+  width: 130px;
+  color: black;
+  border-color: black;
+  border: 1px solid;
+  border-radius: 30px;
+  background-color: white;
+  &:hover {
+		color: white;
+    background-color: black;
+  }
+}
+
+.categories-items {
+  display: inline-flex;
+}
+
+.scrolling-wrapper {
+  margin-top: 20px;
+  overflow-x: scroll;
+}

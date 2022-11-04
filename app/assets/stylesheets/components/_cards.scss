@@ -1,0 +1,92 @@
+
+
+.card {
+  box-shadow: 0 1px 4px #00000014, 0 0 0 1px #0000000a;
+  display: flex;
+  justify-content: space-around;
+  font-size: 22px;
+  border-radius: 30px;
+  max-height: 400px;
+}
+
+.card img {
+  border-radius: 30px 30px 0px 0px;
+  max-height: 200px;
+  background-size: cover;
+  object-fit: cover;
+  height: 100%;
+  width: auto;
+  display: inline-block;
+
+}
+
+.card h3 {
+  font-family: $body-font;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+.card p {
+  font-family: $body-font;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+
+.meals-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+  padding: 16px;
+  margin-bottom: 50px;
+}
+
+.eye-card {
+  position: absolute;
+  box-shadow: 0 1px 4px #00000014, 0 0 0 1px #0000000a;
+  right: 4px;
+  transform: translateY(calc(-100% + 10px));
+  background-color: white;
+  border-radius: 30px;
+  width: 75px;
+  height: 40px;
+  bottom: 60px;
+  margin-right: 10px;
+  padding: 10px;
+}
+
+.eye-card span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FA6902;
+}
+
+.bottom-items{
+  display: flex;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 10px;
+  align-items: center;
+}
+
+.cart span {
+  color: #FA6902;
+}
+
+
+@media(max-width: 992px) {
+  .meals-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media(max-width: 768px) {
+  .meals-cards {
+    grid-template-columns: 1fr;
+  }
+}
