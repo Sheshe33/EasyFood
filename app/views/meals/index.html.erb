@@ -3,16 +3,20 @@
   </div>
   <div class="meals-categories">
     <h2>Catégories</h2>
-      <% @category.each do |category| %>
+      <% @categories.each do |category| %>
         <%= category.name.capitalize %>
       <% end %>
   </div>
   <div class="meals-cards">
-    <% @meal.each do |meal| %>
+    <% @meals.each do |meal| %>
       <%= meal.image_url %>
       <%= meal.name.capitalize %>
       <%= meal.description%>
       <%= meal.price%>
+
+      <% simple_form_for [@order, @meal, @order_item] do %>
+        <%= f.input %>
+      <% end %>
     <% end %>
   </div>
 </div>
