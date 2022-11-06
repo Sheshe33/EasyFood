@@ -1,14 +1,28 @@
-<div class="easyfood-container">
-  <div class="current-offers">
+<div class="container my-4">
+  <div class="current-offer">
+    <div class="card-category" style= "background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(https://images.unsplash.com/photo-1562438281-83c355f4aa09?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1688&q=80)">
+      <h3>Get up To <br> 15% OFF</h3>
+    </div>
   </div>
+
   <div class="meals-categories">
     <h2>Catégories</h2>
       <% @categories.each do |category| %>
         <%= category.name.capitalize %>
+
+  <h2>Categories</h2>
+  <div class="scrolling-wrapper">
+    <div class="categories-items">
+      <% @categories.each do |category| %>
+        <p><%= category.name.capitalize %></p>
+
       <% end %>
+    </div>
   </div>
+  <h2>Meals</h2>
   <div class="meals-cards">
     <% @meals.each do |meal| %>
+
       <%= meal.image_url %>
       <%= meal.name.capitalize %>
       <%= meal.description%>
@@ -17,6 +31,23 @@
       <% simple_form_for [@order, @meal, @order_item] do %>
         <%= f.input %>
       <% end %>
+
+      <div class="card">
+        <img><%= image_tag meal.image_url, :alt => 'product_image' %>
+        <h3><%= meal.name.capitalize%></h3>
+        <%# <p><%= meal.description.first(80) %>
+        <div class= "bottom-items">
+          <p><%= meal.price%></p>
+          <a href="#" class="cart">
+            <span class="material-icons md-24">shopping_cart</span>
+          </a>
+        </div>
+        <a href="#" class="eye-card">
+          <span class="material-icons md-24">visibility</span>
+        </a>
+      </div>
+
     <% end %>
   </div>
 </div>
+<%= render "shared/tabbar" %>
