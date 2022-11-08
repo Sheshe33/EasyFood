@@ -5,10 +5,6 @@
     </div>
   </div>
 
-  <div class="meals-categories">
-    <h2>Catégories</h2>
-      <% @categories.each do |category| %>
-        <%= category.name.capitalize %>
 
   <h2>Categories</h2>
   <div class="scrolling-wrapper">
@@ -22,17 +18,7 @@
   <h2>Meals</h2>
   <div class="meals-cards">
     <% @meals.each do |meal| %>
-
-      <%= meal.image_url %>
-      <%= meal.name.capitalize %>
-      <%= meal.description%>
-      <%= meal.price%>
-
-      <% simple_form_for [@order, @meal, @order_item] do %>
-        <%= f.input %>
-      <% end %>
-
-      <div class="card">
+        <div class="card">
         <img><%= image_tag meal.image_url, :alt => 'product_image' %>
         <h3><%= meal.name.capitalize%></h3>
         <%# <p><%= meal.description.first(80) %>

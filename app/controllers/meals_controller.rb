@@ -27,7 +27,7 @@ class MealsController < ApplicationController
   end
 
   def update
-    @meal = meal.find(params[:id])
+    @meal = Meal.find(params[:id])
     @meal.update(meal_params)
     redirect_to meals_path(@meal)
   end
